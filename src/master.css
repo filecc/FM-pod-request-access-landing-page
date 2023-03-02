@@ -1,0 +1,21 @@
+section img {
+    opacity: 90%;
+    filter: invert(42%) sepia(29%) saturate(495%) hue-rotate(186deg) brightness(88%) contrast(89%);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url('../assets/mobile/image-host.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    body {
+        background-image: url('../assets/tablet/image-host.jpg');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: top;
+    }
+}

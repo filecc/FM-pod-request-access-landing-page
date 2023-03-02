@@ -1,22 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Frontend Mentor | Pod request access landing page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@100;300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/master.css" />
   </head>
-  <body>
-   
 
-  Publish your podcasts everywhere.
+  <body class="bg-dark font-chivo text-white">
+    <div
+      class="container grid min-h-screen w-full place-items-center bg-fg-dark bg-opacity-80 px-4 py-4 md:px-0 md:block md:bg-opacity-0"
+    >
+      <header class="grid place-items-center py-4 uppercase md:block md:px-2">
+        <img class="w-40" src="./assets/desktop/logo.svg" alt="logo" />
+      </header>
 
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-  Apple Podcasts, Google Podcasts, Pocket Casts and more!
-
-  Request access
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <main class="md:mt-28 md:w-10/12 md:bg-fg-dark md:py-24">
+        <section>
+          <h1
+            class="text-center text-[26px] font-thin uppercase leading-10 text-fg-green md:text-left md:text-[48px]"
+          >
+            Publish your podcasts
+          </h1>
+          <span
+            class="block py-2 text-center text-[26px] font-thin uppercase leading-10 md:text-left md:text-[48px]"
+            >everywhere.</span
+          >
+          <h2
+            class="pt-3 pb-4 text-center text-[15px] font-thin leading-6 text-fg-gray-very-light"
+          >
+            Upload your audio to Pod with a single click. We’ll then distribute
+            your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket
+            Casts and more!
+          </h2>
+        </section>
+        <section>
+          <h2 aria-hiddden="true" class="hidden">Section title</h2>
+          <div class="container-fluid">
+       
+              <div class="w-full text-center">
+                <div class="flex">
+                  <div class="w-2/12 flex items-center justify-center">
+                    <img
+                      class="img-fluid"
+                      src="./assets/desktop/spotify.svg"
+                      alt="spotify"
+                    />
+                  </div>
+                  <div class="w-3/12 px-[0.7rem]">
+                    <img
+                      class="img-fluid"
+                      src="./assets/desktop/apple-podcast.svg"
+                      alt="apple"
+                    />
+                  </div>
+                  <div class="w-4/12 px-[0.4rem] flex items-center justify-center">
+                    <img
+                      class="img-fluid"
+                      src="./assets/desktop/google-podcasts.svg"
+                      alt="google"
+                    />
+                  </div>
+                  <div class="w-3/12 px-[0.4rem] flex items-center justify-center">
+                    <img
+                      class="img-fluid"
+                      src="./assets/desktop/pocket-casts.svg"
+                      alt="pocket"
+                    />
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </section>
+      </main>
+      <footer class="w-full">
+        <form
+          name="email_form"
+          action="#"
+          autocomplete="false"
+          onsubmit="return validateForm()"
+        >
+          <input
+            type="email"
+            class="block w-full rounded-full bg-fg-gray-dark py-[12px] px-[30px] focus-visible:outline-none active:border-0"
+            name="input_email"
+            placeholder="Email address"
+            value=""
+          />
+          <div class="text-red-600">
+            <p
+              id="invalid"
+              class="hidden py-[0.2rem] px-[30px] text-[12px] font-bold"
+            >
+              Oops! Please check your email
+            </p>
+          </div>
+          <input
+            id="submit"
+            type="submit"
+            class="mt-3 block w-full rounded-full bg-fg-green py-[12px] font-bold text-fg-dark"
+            value="Request Access"
+          />
+        </form>
+      </footer>
+    </div>
+    <script src="./index.js"></script>
   </body>
 </html>
