@@ -28,13 +28,13 @@ Users should be able to:
 ### Screenshot
 
 ## Desktop
-![Desktop](./desktop.jpg)
+![Desktop](./desktop.png)
 
 ## Tablet
-![Tablet](./tablet.jpg)
+![Tablet](./tablet.png)
 
 ## Mobile
-![Mobile](./mobile.jpg)
+![Mobile](./mobile.png)
 
 
 ### Links
