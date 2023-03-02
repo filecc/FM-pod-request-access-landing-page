@@ -19,3 +19,12 @@ section img {
         background-position-y: top;
     }
 }
+
+@media screen and (min-width: 1200px){
+    body {
+        background-image: url('../assets/desktop/image-host.jpg');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: 30%;
+    }
+}

@@ -18,103 +18,125 @@
     <link rel="stylesheet" href="./src/master.css" />
   </head>
 
-  <body class="bg-dark font-chivo text-white">
+  <body class="bg-fg-dark font-chivo text-white">
     <div
-      class="container grid min-h-screen w-full place-items-center bg-fg-dark bg-opacity-80 px-4 py-4 md:px-0 md:block md:bg-opacity-0"
+      class="container lg:px-20 grid min-h-screen w-full place-items-center bg-fg-dark bg-opacity-80 px-4 py-4 md:block md:bg-opacity-0 md:px-0"
     >
-      <header class="grid place-items-center py-4 uppercase md:block md:px-2">
+      <header class="grid place-items-center py-4 uppercase md:block md:px-2 lg:py-16">
         <img class="w-40" src="./assets/desktop/logo.svg" alt="logo" />
       </header>
 
-      <main class="md:mt-28 md:w-10/12 md:bg-fg-dark md:py-24">
-        <section>
+      <main class="p-2 md:mt-36 md:w-10/12 lg:w-8/12 md:bg-fg-dark md:p-0 md:py-24 lg:mt-0">
+        <section class="md:px-5">
           <h1
-            class="text-center text-[26px] font-thin uppercase leading-10 text-fg-green md:text-left md:text-[48px]"
+            class="text-center text-[26px] lg:text-[52px] font-thin uppercase leading-10 text-fg-green md:text-left md:text-[48px] md:leading-[56px] lg:leading-[62px]"
           >
             Publish your podcasts
           </h1>
           <span
-            class="block py-2 text-center text-[26px] font-thin uppercase leading-10 md:text-left md:text-[48px]"
+            class="block py-2 text-center text-[26px] lg:text-[52px]
+            lg:leading-[62px] font-thin uppercase leading-10 md:text-left md:text-[48px] md:leading-[56px]"
             >everywhere.</span
           >
           <h2
-            class="pt-3 pb-4 text-center text-[15px] font-thin leading-6 text-fg-gray-very-light"
+            class="pt-3 pb-4 text-center text-[15px] font-thin leading-6 text-fg-gray-very-light md:w-9/12 md:text-left md:text-[18px] md:leading-[28px]"
           >
             Upload your audio to Pod with a single click. We’ll then distribute
             your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket
             Casts and more!
           </h2>
         </section>
-        <section>
+        <section class="md:flex md:flex-col-reverse">
           <h2 aria-hiddden="true" class="hidden">Section title</h2>
-          <div class="container-fluid">
-       
-              <div class="w-full text-center">
-                <div class="flex">
-                  <div class="w-2/12 flex items-center justify-center">
-                    <img
-                      class="img-fluid"
-                      src="./assets/desktop/spotify.svg"
-                      alt="spotify"
-                    />
-                  </div>
-                  <div class="w-3/12 px-[0.7rem]">
-                    <img
-                      class="img-fluid"
-                      src="./assets/desktop/apple-podcast.svg"
-                      alt="apple"
-                    />
-                  </div>
-                  <div class="w-4/12 px-[0.4rem] flex items-center justify-center">
-                    <img
-                      class="img-fluid"
-                      src="./assets/desktop/google-podcasts.svg"
-                      alt="google"
-                    />
-                  </div>
-                  <div class="w-3/12 px-[0.4rem] flex items-center justify-center">
-                    <img
-                      class="img-fluid"
-                      src="./assets/desktop/pocket-casts.svg"
-                      alt="pocket"
-                    />
-                  </div>
+          <!-- partner -->
+          <div class="container md:pt-20 lg:pt-14 md:px-4">
+            <div class="w-full lg:w-4/5 text-center">
+              <div class="flex">
+                <div class="flex w-2/12 items-center justify-center lg:w-3/12 lg:justify-start">
+                  <img
+                    class="img-fluid"
+                    src="./assets/desktop/spotify.svg"
+                    alt="spotify"
+                  />
+                </div>
+                <div class="w-3/12 px-[0.7rem] flex items-center justify-center lg:justify-start">
+                  <img
+                    class="img-fluid"
+                    src="./assets/desktop/apple-podcast.svg"
+                    alt="apple"
+                  />
+                </div>
+                <div
+                  class="flex w-4/12 items-center justify-center px-[0.4rem] lg:w-3/12 lg:justify-start"
+                >
+                  <img
+                    class="img-fluid"
+                    src="./assets/desktop/google-podcasts.svg"
+                    alt="google"
+                  />
+                </div>
+                <div
+                  class="flex w-3/12 items-center justify-center px-[0.4rem] lg:justify-start"
+                >
+                  <img
+                    class="img-fluid"
+                    src="./assets/desktop/pocket-casts.svg"
+                    alt="pocket"
+                  />
                 </div>
               </div>
-            
+            </div>
+          </div>
+          <!-- form -->
+          <div class="w-full pt-10 md:pt-4 md:w-8/12 md:px-4">
+            <form
+              name="email_form"
+              action="#"
+              autocomplete="false"
+              onsubmit="return validateForm()"
+            >
+              <div class="relative">
+                <input
+                  type="email"
+                  class="block w-full rounded-full bg-fg-gray-dark py-[12px] md:py-[18px] px-[30px] focus-visible:outline-none active:border-0"
+                  name="input_email"
+                  placeholder="Email address"
+                  value=""
+                />
+                <div class="text-red-600">
+                  <p
+                    id="invalid"
+                    class="hidden py-[0.2rem] px-[30px] text-[12px] font-bold"
+                  >
+                    Oops! Please check your email
+                  </p>
+                </div>
+                <input
+                  id="submit"
+                  type="submit"
+                  class="md:top-0 md:right-0 md:-translate-x-2 md:translate-y-2 mt-3 md:mt-0 block w-full rounded-full bg-fg-green py-[12px] md:py-[10px]  font-bold text-fg-dark md:absolute md:w-5/12 md:text-[14px]"
+                  value="Request Access"
+                />
+              </div>
+            </form>
           </div>
         </section>
       </main>
-      <footer class="w-full">
-        <form
-          name="email_form"
-          action="#"
-          autocomplete="false"
-          onsubmit="return validateForm()"
-        >
-          <input
-            type="email"
-            class="block w-full rounded-full bg-fg-gray-dark py-[12px] px-[30px] focus-visible:outline-none active:border-0"
-            name="input_email"
-            placeholder="Email address"
-            value=""
-          />
-          <div class="text-red-600">
-            <p
-              id="invalid"
-              class="hidden py-[0.2rem] px-[30px] text-[12px] font-bold"
-            >
-              Oops! Please check your email
-            </p>
-          </div>
-          <input
-            id="submit"
-            type="submit"
-            class="mt-3 block w-full rounded-full bg-fg-green py-[12px] font-bold text-fg-dark"
-            value="Request Access"
-          />
-        </form>
-      </footer>
+
+      <div class="absolute bottom-0 left-8 hidden md:block lg:hidden ">
+        <img
+          aria-hidden="true"
+          src="./assets/desktop/bg-pattern-dots.svg"
+          alt="pattern"
+        />
+      </div>
+      <div class="absolute bottom-[15%] right-0 hidden lg:block ">
+        <img
+          aria-hidden="true"
+          src="./assets/desktop/bg-pattern-dots.svg"
+          alt="pattern"
+        />
+      </div>
     </div>
     <script src="./index.js"></script>
   </body>
