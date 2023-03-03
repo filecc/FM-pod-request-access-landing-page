@@ -10,10 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Chivo:wght@100;300;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    />
     <link href="./dist/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="./src/master.css" />
   </head>
@@ -38,16 +34,15 @@
             lg:leading-[62px] font-thin uppercase leading-10 md:text-left md:text-[48px] md:leading-[56px]"
             >everywhere.</span
           >
-          <h2
+          <p
             class="pt-3 pb-4 text-center text-[15px] font-thin leading-6 text-fg-gray-very-light md:w-9/12 md:text-left md:text-[18px] md:leading-[28px]"
           >
             Upload your audio to Pod with a single click. We’ll then distribute
             your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket
             Casts and more!
-          </h2>
+          </p>
         </section>
-        <section class="md:flex md:flex-col-reverse">
-          <h2 class="hidden">Section title</h2>
+        <div class="md:flex md:flex-col-reverse">
           <!-- partner -->
           <div class="container md:pt-20 lg:pt-14 md:px-4">
             <div class="w-full lg:w-4/5 text-center">
@@ -56,14 +51,14 @@
                   <img
                     class="img-fluid"
                     src="./assets/desktop/spotify.svg"
-                    alt="spotify"
+                    alt="partner one: spotify"
                   />
                 </div>
                 <div class="w-3/12 px-[0.7rem] flex items-center justify-center lg:justify-start">
                   <img
                     class="img-fluid"
                     src="./assets/desktop/apple-podcast.svg"
-                    alt="apple"
+                    alt="partner two: apple"
                   />
                 </div>
                 <div
@@ -72,7 +67,7 @@
                   <img
                     class="img-fluid"
                     src="./assets/desktop/google-podcasts.svg"
-                    alt="google"
+                    alt="partner three: google"
                   />
                 </div>
                 <div
@@ -81,7 +76,7 @@
                   <img
                     class="img-fluid"
                     src="./assets/desktop/pocket-casts.svg"
-                    alt="pocket"
+                    alt="partner four: pocket"
                   />
                 </div>
               </div>
@@ -111,16 +106,15 @@
                   >
                   </p>
                 </div>
-                <input
+                <button
                   id="submit"
                   type="submit"
-                  class="md:top-0 md:right-0 md:-translate-x-2 md:translate-y-2 mt-3 md:mt-0 block w-full rounded-full bg-fg-green py-[12px] md:py-[10px]  font-bold text-fg-dark md:absolute md:w-5/12 md:text-[14px]"
-                  value="Request Access"
-                />
+                  class="md:top-0 md:right-0 md:-translate-x-2 md:translate-y-2 mt-3 md:mt-0 block w-full rounded-full bg-fg-green py-[12px] md:py-[12px]  font-bold text-fg-dark md:absolute md:w-5/12 md:text-[14px]"
+                >Request Access</button>
               </div>
             </form>
           </div>
-        </section>
+        </div>
       </main>
 
       <div class="absolute bottom-0 left-8 hidden md:block lg:hidden ">
